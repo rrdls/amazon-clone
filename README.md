@@ -35,3 +35,5 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 2. Crie uma branch com a sua feature: `git checkout -b minha-feature`;
 3. Faça commit das suas alterações: `git commit -m 'feat: Minha nova feature'`;
 4. Faça push para a sua branch: `git push origin minha-feature`.
+
+Made with ♥ by Renato Ramos :wave: [Get in touch!](https://www.linkedin.com/in/renato-ramos-1443471a9)
