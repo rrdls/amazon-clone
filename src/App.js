@@ -1,26 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
+import React, { useEffect } from "react";
+import { GlobalStyle } from "../src/assets/styles/global";
+import { useDispatch } from "react-redux";
+import Routes from "./config/routes";
+import { auth } from "./firebase";
+import * as actionCreators from "./state/actions";
+const App = () => {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    auth.onAuthStateChanged((authUser) => {
+      console.log(authUser);
+      authUser
+        ? dispatch(actionCreators.setUser(authUser))
+        : dispatch(actionCreators.setUser(null));
+    });
+  }, []);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <GlobalStyle />
+      <Routes />
+    </>
   );
-}
+};
 
 export default App;
