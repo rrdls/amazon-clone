@@ -22,7 +22,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 ## 🖥️ Layout
 
-...
+-[Deploy](https://admiring-lamport-12b08e.netlify.app)
 
 ## ▶️ Executar
 
