@@ -1,23 +1,18 @@
-import React, { useCallback } from "react";
+import React from "react";
 import { useDispatch } from "react-redux";
-import {
-  Container,
-  CheckoutProductInfo,
-  CheckoutProductRating,
-  StarRateIcon,
-} from "./styles";
+import { Container, CheckoutProductInfo, CheckoutProductRating, StarRateIcon } from "./styles";
 import * as actionCreators from "../../state/actions";
 
 function CheckoutProduct({ id, image, title, price, rating, idBasket }) {
   const dispatch = useDispatch();
 
-  const removeFromBasket = useCallback(() => {
+  const removeFromBasket = () => {
     dispatch(
       actionCreators.removeFromBasket({
         idBasket,
       })
     );
-  }, []);
+  };
 
   return (
     <Container>

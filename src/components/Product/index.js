@@ -1,4 +1,4 @@
-import React, { useCallback } from "react";
+import React from "react";
 import { useDispatch } from "react-redux";
 import { Container, ProductInfo, StarRateIcon } from "./styles";
 import * as actionCreators from "../../state/actions";
@@ -6,8 +6,7 @@ import * as actionCreators from "../../state/actions";
 import { default as UUID } from "node-uuid";
 const Product = ({ id, title, image, price, rating }) => {
   const dispatch = useDispatch();
-
-  const addToBasket = useCallback(() => {
+  const addToBasket = () => {
     dispatch(
       actionCreators.addToBasket({
         id,
@@ -18,7 +17,7 @@ const Product = ({ id, title, image, price, rating }) => {
         idBasket: UUID.v4(),
       })
     );
-  }, []);
+  };
 
   return (
     <Container>

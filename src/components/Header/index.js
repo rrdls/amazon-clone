@@ -8,7 +8,7 @@ import {
   SearchIcon,
   ShoppingBasketIcon,
 } from "./styles";
-import { Link, useHistory } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import { useSelector } from "react-redux";
 
@@ -19,7 +19,6 @@ const Header = () => {
     return [state.basket.basket, state.user.user];
   });
 
-  const history = useHistory();
   const handleAuthentication = () => {
     user && auth.signOut();
   };

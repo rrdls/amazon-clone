@@ -13,7 +13,7 @@ const App = () => {
         ? dispatch(actionCreators.setUser(authUser))
         : dispatch(actionCreators.setUser(null));
     });
-  }, []);
+  }, [dispatch]);
   return (
     <>
       <GlobalStyle />

@@ -12,7 +12,7 @@ export const GlobalStyle = createGlobalStyle`
 
         body{
             background-color: rgb(234,237,237);
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+            font-family: 'Roboto', sans-serif;
         
         }
 
